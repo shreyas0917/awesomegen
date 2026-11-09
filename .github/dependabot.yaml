@@ -38,6 +38,9 @@ updates:
           - "*"
 
   # Keep Docker base images fresh
+  # Dependabot scans every file in the directory whose name contains
+  # "Dockerfile", so this entry covers both Dockerfile and
+  # Dockerfile.goreleaser (see #139, which bumped the pin in both).
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
